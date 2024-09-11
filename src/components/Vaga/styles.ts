@@ -1,32 +1,44 @@
 import styled from 'styled-components'
 
-export const VagaContainer = styled.li`
-  border: 1px solid #ccc;
+export const VagaContainer = styled.div`
+  border: 1px solid var(--cor-principal);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
   padding: 16px;
-  margin: 16px 0;
-  list-style: none;
+  transition: all ease 0.3s;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+
+    a {
+      border-color: var(--cor-principal);
+      background-color: var(--cor-secundaria);
+      color: var(--cor-principal);
+    }
+  }
 `
 
-export const VagaTitulo = styled.h3`
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #333;
+export const VagaTitulo = styled.h2`
+  font-weight: bold;
+  margin-bottom: 16px;
 `
 
 export const VagaLink = styled.a`
+  border-color: var(--cor-secundaria);
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
   display: inline-block;
-  margin-top: 16px;
   padding: 8px 16px;
-  background-color: #a7727d;
-  color: #fff;
   text-decoration: none;
-  border-radius: 4px;
-  trasition: background-color 0.3s ease;
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  text-align: center;
 
-  &:hover {
-    background-color: #f9f5e7;
-    color: #000;
+  @media (max-width: 768px) {
+    display: block;
   }
 `

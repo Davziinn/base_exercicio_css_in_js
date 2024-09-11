@@ -1,4 +1,3 @@
-// GlobalStyles.ts
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,6 +16,12 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     padding-bottom: 120px;
+  }
+
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   @media (max-width: 1024px) {

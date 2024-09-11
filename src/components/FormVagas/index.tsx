@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react'
 
-import { Form, Campo, Botao } from './styles'
+import { Form, Campo, BtnPesquisar } from './styles'
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -11,7 +11,7 @@ const FormVagas = ({ aoPesquisar }: Props) => {
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    aoPesquisar(termo.toLocaleLowerCase())
+    aoPesquisar(termo.toLowerCase())
   }
 
   return (
@@ -21,8 +21,9 @@ const FormVagas = ({ aoPesquisar }: Props) => {
         onChange={(e) => setTermo(e.target.value)}
         type="search"
       />
-      <Botao type="submit">Pesquisar</Botao>
+      <BtnPesquisar type="submit">Pesquisar</BtnPesquisar>
     </Form>
   )
 }
+
 export default FormVagas
