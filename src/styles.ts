@@ -22,11 +22,13 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px; /* Adiciona espaçamento lateral */
   }
 
   @media (max-width: 1024px) {
     .container {
-      max-width: 80%;
+      max-width: 90%; /* Ajustado para melhorar a responsividade */
+      padding: 0 15px; /* Ajusta o padding lateral em telas menores */
     }
   }
 `
